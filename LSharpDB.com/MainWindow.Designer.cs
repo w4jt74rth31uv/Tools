@@ -34,7 +34,6 @@
             this.cName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cGithub = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cVote = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cLastcommit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.RightClickMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.installRightClickMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.githubRightClickMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,8 +57,7 @@
             this.cType,
             this.cName,
             this.cGithub,
-            this.cVote,
-            this.cLastcommit});
+            this.cVote});
             this.assemListview.ContextMenuStrip = this.RightClickMenu;
             this.assemListview.FullRowSelect = true;
             this.assemListview.GridLines = true;
@@ -69,7 +67,7 @@
             this.assemListview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.assemListview.MultiSelect = false;
             this.assemListview.Name = "assemListview";
-            this.assemListview.Size = new System.Drawing.Size(752, 408);
+            this.assemListview.Size = new System.Drawing.Size(616, 337);
             this.assemListview.TabIndex = 0;
             this.assemListview.UseCompatibleStateImageBehavior = false;
             this.assemListview.View = System.Windows.Forms.View.Details;
@@ -93,11 +91,6 @@
             // 
             this.cVote.Text = "Vote";
             this.cVote.Width = 40;
-            // 
-            // cLastcommit
-            // 
-            this.cLastcommit.Text = "Lastcommit";
-            this.cLastcommit.Width = 130;
             // 
             // RightClickMenu
             // 
@@ -131,10 +124,10 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(275, 241);
+            this.progressBar1.Location = new System.Drawing.Point(206, 210);
             this.progressBar1.MarqueeAnimationSpeed = 10;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(224, 23);
+            this.progressBar1.Size = new System.Drawing.Size(225, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar1.TabIndex = 2;
             // 
@@ -144,17 +137,17 @@
             this.waitPanel.Controls.Add(this.label1);
             this.waitPanel.Location = new System.Drawing.Point(0, 0);
             this.waitPanel.Name = "waitPanel";
-            this.waitPanel.Size = new System.Drawing.Size(18, 11);
+            this.waitPanel.Size = new System.Drawing.Size(640, 391);
             this.waitPanel.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 182);
+            this.label1.Location = new System.Drawing.Point(2, 151);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(773, 56);
+            this.label1.Size = new System.Drawing.Size(637, 56);
             this.label1.TabIndex = 3;
             this.label1.Text = "Please wait...";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -164,9 +157,9 @@
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.searchBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.searchBox.Location = new System.Drawing.Point(275, 12);
+            this.searchBox.Location = new System.Drawing.Point(253, 12);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(489, 23);
+            this.searchBox.Size = new System.Drawing.Size(375, 23);
             this.searchBox.TabIndex = 4;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
@@ -175,7 +168,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(223, 15);
+            this.label2.Location = new System.Drawing.Point(203, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 15);
             this.label2.TabIndex = 5;
@@ -198,12 +191,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 463);
+            this.ClientSize = new System.Drawing.Size(640, 392);
             this.Controls.Add(this.waitPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.searchBox);
-            this.Controls.Add(this.assemListview);
             this.Controls.Add(this.lSharpDBLink);
+            this.Controls.Add(this.assemListview);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -238,7 +231,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lSharpDBLink;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
-        private System.Windows.Forms.ColumnHeader cLastcommit;
     }
 }
 

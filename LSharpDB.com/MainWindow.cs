@@ -71,10 +71,10 @@ namespace LSharpDB.com
                         autoCompleteCollection.Add(github.Replace("/tree/master", string.Empty));
 
                         //var splittemp = github.Split('/');
-                        //var commitdata = getHttpSource("https://api.github.com/repos/" + splittemp[0] + "/" + splittemp[1] + "/commits?path=" + splittemp[splittemp.Length - 1] + "&access_token=03fd96cc419140981cadd0578451e36d1424f64b");
-                        //too slow and fucking limit . _.
+                        //var commitdata = getHttpSource("https://api.github.com/repos/" + splittemp[0] + "/" + splittemp[1] + "/commits?path=" + splittemp[splittemp.Length - 1]);
+                        //too slow and frigging limit . _.
 
-                        addItems(champ, name, github, vote, string.Empty);
+                        addItems(champ, name, github, vote);
                     }
                 }
             }
@@ -94,13 +94,12 @@ namespace LSharpDB.com
             searchBox.AutoCompleteCustomSource = autoCompleteCollection;
         }
 
-        void addItems(string champion, string assemblyName, string gitHub, string Vote, string Lastcommit)
+        void addItems(string champion, string assemblyName, string gitHub, string Vote)
         {
             ListViewItem itemTemp = new ListViewItem(champion);
             itemTemp.SubItems.Add(assemblyName);
             itemTemp.SubItems.Add(gitHub == "0" ? "unknown" : gitHub.Replace("\\", string.Empty).Replace("https://github.com/", string.Empty));
             itemTemp.SubItems.Add(Vote);
-            itemTemp.SubItems.Add(Lastcommit);
 
             assemListview.Items.Add(itemTemp);
         }
@@ -144,7 +143,7 @@ namespace LSharpDB.com
         string getHttpSource(string url)
         {
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-            req.UserAgent = "?";
+            req.UserAgent = "i'm xcsoft";
 
             return new System.IO.StreamReader((req.GetResponse()).GetResponseStream(), System.Text.Encoding.Default).ReadToEnd();
         }
