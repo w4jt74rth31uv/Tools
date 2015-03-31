@@ -45,7 +45,7 @@ namespace LeagueSharp_StreamingMode
                 Console.WriteLine("[*] L# Core Path: " + WhereisCore);
                 Console.WriteLine("[*] L# Core Name: " + CoreName + "\n");
 
-                Console.WriteLine("[*] Waiting for LoL.exe and L# Core Inject...");
+                Console.WriteLine("[*] Waiting for LoL.exe and L# Core Inject...\n");
             }
             catch
             {
@@ -59,17 +59,17 @@ namespace LeagueSharp_StreamingMode
             while (LeaguesharpCore == 0)
             {
                 LeaguesharpCore = GetModuleAddress();
-                System.Threading.Thread.Sleep(500);
+                System.Threading.Thread.Sleep(200);
             }
 
             Console.WriteLine("[*] L# Core inject Detected.");
 
+            System.Threading.Thread.Sleep(3000);
+
             try
             {
                 Program.SetUpOffsets();
-
-                if (!IsEnabled())
-                    Program.Enable();
+                Program.Enable();
             }
             catch
             {
