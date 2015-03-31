@@ -13,7 +13,7 @@ namespace LeagueSharp_StreamingMode
 {
     class Program
     {
-        //StreamingMode Assembly of stefsot based.
+        //StreamingMode Assembly based. https://www.joduska.me/forum/topic/4721-54-leaguesharp-streaming-mode/
 
         static Assembly lib;
         static int LeaguesharpCore;
@@ -31,7 +31,7 @@ namespace LeagueSharp_StreamingMode
         {
             Console.Clear();
 
-            Console.Title = "[xcsoft] LeagueSharp StreamingMode For 5.6";
+            Console.Title = "[xcsoft] LeagueSharp StreamingMode";
 
             Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("[*] {0}", Console.Title);
