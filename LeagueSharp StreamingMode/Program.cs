@@ -40,7 +40,8 @@ namespace LeagueSharp_StreamingMode
             try
             {
                 var WhereisCore = Directory.GetFiles(Directory.GetDirectories(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.None)).Where(x => x.Substring(x.Length - 10).Contains("LS")).FirstOrDefault() + @"\1\").Where(x => x.Substring(x.Length - 4) == ".dll" && new FileInfo(x).Length >= 2616320).FirstOrDefault();
-                CoreName = WhereisCore.Substring(WhereisCore.Length - 10);
+
+                CoreName = WhereisCore.Split('\\')[WhereisCore.Split('\\').Length-1];
 
                 Console.WriteLine("[*] L# Core Path: " + WhereisCore);
                 Console.WriteLine("[*] L# Core Name: " + CoreName + "\n");
